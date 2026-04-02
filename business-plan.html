@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Plan - Dimsum Yanti Lubis | Medan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+:root {
+  --red: #C41E3A;
+  --gold: #D4A017;
+  --dark: #1a1a2e;
+  --cream: #FFF8F0;
+  --accent: #E8A317;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #333; background: #fff; line-height: 1.7; }
+.cover {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--red) 0%, #8B0000 50%, var(--dark) 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: white; text-align: center; padding: 40px; position: relative; overflow: hidden;
+}
+.cover::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='2' fill='%23ffffff10'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+.cover * { position: relative; z-index: 1; }
+.logo-container {
+  width: 180px; height: 180px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.logo-text {
+  font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900;
+  color: var(--red); text-align: center; line-height: 1.1;
+}
+.logo-text span { display: block; font-size: 14px; font-weight: 400; letter-spacing: 4px; color: #8B0000; }
+.cover h1 { font-family: 'Playfair Display', serif; font-size: 3.5em; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+.cover h2 { font-size: 1.3em; font-weight: 300; color: var(--gold); letter-spacing: 3px; margin-bottom: 15px; }
+.cover p { font-size: 1.1em; opacity: 0.9; max-width: 600px; }
+.chinese-ornament { font-size: 3em; margin: 20px 0; color: var(--gold); }
+
+.page { max-width: 900px; margin: 0 auto; padding: 60px 40px; page-break-before: always; }
+.page:first-of-type { page-break-before: avoid; }
+h2.section-title {
+  font-family: 'Playfair Display', serif; font-size: 2em; color: var(--red);
+  border-bottom: 3px solid var(--gold); padding-bottom: 15px; margin-bottom: 30px;
+}
+h3 { color: var(--dark); font-size: 1.3em; margin: 25px 0 15px; }
+p, li { font-size: 1em; margin-bottom: 12px; }
+ul { padding-left: 25px; }
+ul li { margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th { background: var(--red); color: white; padding: 12px 15px; text-align: left; font-weight: 600; }
+td { padding: 10px 15px; border-bottom: 1px solid #eee; }
+tr:nth-child(even) { background: #faf5f0; }
+.highlight-box {
+  background: linear-gradient(135deg, #fff8f0, #fff3e0); border-left: 4px solid var(--gold);
+  padding: 20px 25px; border-radius: 0 10px 10px 0; margin: 20px 0;
+}
+.swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+.swot-card {
+  padding: 25px; border-radius: 12px; color: white;
+}
+.swot-card h4 { font-size: 1.2em; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.swot-card ul { padding-left: 20px; }
+.swot-card li { margin-bottom: 6px; font-size: 0.95em; }
+.strength { background: linear-gradient(135deg, #2E7D32, #1B5E20); }
+.weakness { background: linear-gradient(135deg, #C62828, #B71C1C); }
+.opportunity { background: linear-gradient(135deg, #1565C0, #0D47A1); }
+.threat { background: linear-gradient(135deg, #F57F17, #E65100); }
+.financial-summary {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0;
+}
+.fin-card {
+  text-align: center; padding: 25px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--red), #8B0000); color: white;
+}
+.fin-card .amount { font-size: 1.8em; font-weight: 700; color: var(--gold); }
+.fin-card .label { font-size: 0.9em; opacity: 0.9; margin-top: 5px; }
+.timeline { position: relative; padding-left: 30px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 3px; background: var(--gold); }
+.timeline-item { position: relative; margin-bottom: 25px; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -26px; top: 5px; width: 14px; height: 14px;
+  border-radius: 50%; background: var(--red); border: 3px solid var(--gold);
+}
+footer.doc-footer {
+  text-align: center; padding: 40px; background: var(--dark); color: white;
+  font-size: 0.9em;
+}
+@media print {
+  .cover { min-height: 100vh; }
+  .page { padding: 40px 30px; }
+  .swot-grid { break-inside: avoid; }
+}
+@media (max-width: 768px) {
+  .cover h1 { font-size: 2.2em; }
+  .swot-grid, .financial-summary { grid-template-columns: 1fr; }
+  .page { padding: 30px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="logo-container">
+    <div class="logo-text">DY<span>DIMSUM</span></div>
+  </div>
+  <div class="chinese-ornament">&#x2766;</div>
+  <h1>Dimsum Yanti Lubis</h1>
+  <h2>BUSINESS PLAN 2026</h2>
+  <p>Premium Handmade Dim Sum &mdash; Cita Rasa Medan, Sentuhan Oriental</p>
+  <p style="margin-top:20px; font-size:0.9em; opacity:0.7;">Medan, Sumatera Utara &bull; Indonesia</p>
+  <p style="font-size:0.85em; opacity:0.6; margin-top:10px;">Prepared by: Yanti Lubis | April 2026</p>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="page">
+  <h2 class="section-title">1. Ringkasan Eksekutif</h2>
+
+  <div class="highlight-box">
+    <strong>Visi:</strong> Menjadi brand dimsum premium #1 di Medan yang menggabungkan cita rasa oriental autentik dengan sentuhan lokal Sumatera Utara, tersedia di semua platform delivery dalam 2 tahun.
+  </div>
+
+  <p><strong>Dimsum Yanti Lubis (DY Dimsum)</strong> adalah bisnis kuliner dimsum premium yang berbasis di Medan, Sumatera Utara. Kami menyajikan dimsum handmade berkualitas tinggi dengan bahan-bahan segar pilihan, menggabungkan resep tradisional Cantonese dengan inovasi rasa lokal Medan.</p>
+
+  <h3>Keunggulan Utama</h3>
+  <ul>
+    <li><strong>Handmade Premium</strong> &mdash; Setiap dimsum dibuat fresh setiap hari tanpa pengawet</li>
+    <li><strong>Fusion Medan-Oriental</strong> &mdash; Varian unik seperti Dimsum Andaliman, Siomay Arsik, dan Hakau Sambal Medan</li>
+    <li><strong>Online-First Strategy</strong> &mdash; Fokus delivery via GoFood, GrabFood, dan ShopeeFood</li>
+    <li><strong>Frozen Ready-to-Cook</strong> &mdash; Lini produk frozen untuk jangkauan lebih luas</li>
+    <li><strong>Halal Certified</strong> &mdash; Sertifikasi halal MUI untuk pasar yang lebih besar</li>
+  </ul>
+
+  <h3>Target Pasar</h3>
+  <p>Medan memiliki populasi 2.4+ juta jiwa dengan kultur kuliner yang kuat. Target utama kami adalah:</p>
+  <ul>
+    <li>Usia 18-45 tahun, kelas menengah dan menengah-atas</li>
+    <li>Mahasiswa dan pekerja kantoran yang aktif memesan via food delivery</li>
+    <li>Keluarga yang mencari camilan/makanan berkualitas</li>
+    <li>Komunitas kuliner dan food blogger Medan</li>
+  </ul>
+</div>
+
+<!-- PRODUCT LINEUP -->
+<div class="page">
+  <h2 class="section-title">2. Produk & Menu</h2>
+
+  <h3>Menu Signature</h3>
+  <table>
+    <tr><th>Produk</th><th>Deskripsi</th><th>Harga (per box/4pcs)</th></tr>
+    <tr><td>Hakau Premium</td><td>Udang segar dalam kulit transparan, resep klasik</td><td>Rp 28.000</td></tr>
+    <tr><td>Siomay Ayam Special</td><td>Ayam kampung cincang halus, jamur shiitake</td><td>Rp 22.000</td></tr>
+    <tr><td>Dimsum Andaliman</td><td>Signature! Siomay dengan sentuhan andaliman Batak</td><td>Rp 25.000</td></tr>
+    <tr><td>Lumpia Udang Crispy</td><td>Kulit renyah, isian udang premium</td><td>Rp 25.000</td></tr>
+    <tr><td>Ceker Ayam Saus Tiram</td><td>Empuk, bumbu meresap</td><td>Rp 20.000</td></tr>
+    <tr><td>Bakpao Mini Isi Ayam</td><td>Fluffy bun, isian ayam BBQ</td><td>Rp 18.000</td></tr>
+    <tr><td>Taro Ball</td><td>Talas lembut, isian kacang</td><td>Rp 20.000</td></tr>
+    <tr><td>Cheong Fun</td><td>Rice noodle roll isi udang/ayam</td><td>Rp 24.000</td></tr>
+  </table>
+
+  <h3>Paket Bundling</h3>
+  <table>
+    <tr><th>Paket</th><th>Isi</th><th>Harga</th></tr>
+    <tr><td>Paket Hemat (1-2 orang)</td><td>3 box pilihan + 1 saus special</td><td>Rp 65.000</td></tr>
+    <tr><td>Paket Keluarga (3-4 orang)</td><td>5 box pilihan + 2 saus + free teh</td><td>Rp 99.000</td></tr>
+    <tr><td>Paket Sultan (5-8 orang)</td><td>8 box all variant + saus komplit</td><td>Rp 155.000</td></tr>
+    <tr><td>Frozen Box (10 pcs campur)</td><td>Dimsum frozen ready-to-steam</td><td>Rp 55.000</td></tr>
+    <tr><td>Frozen Family (20 pcs)</td><td>Dimsum frozen, 4 varian</td><td>Rp 99.000</td></tr>
+  </table>
+
+  <h3>Sertifikasi & Standar</h3>
+  <ul>
+    <li>Halal MUI (proses pengajuan bulan ke-2)</li>
+    <li>BPOM untuk produk frozen</li>
+    <li>PIRT (Pangan Industri Rumah Tangga)</li>
+    <li>Standar kebersihan food-grade kitchen</li>
+  </ul>
+</div>
+
+<!-- SWOT ANALYSIS -->
+<div class="page">
+  <h2 class="section-title">3. Analisis SWOT</h2>
+
+  <div class="swot-grid">
+    <div class="swot-card strength">
+      <h4>&#x1F4AA; STRENGTHS (Kekuatan)</h4>
+      <ul>
+        <li>Produk handmade premium, bukan massal/pabrik</li>
+        <li>Inovasi rasa fusion Medan-Oriental yang unik</li>
+        <li>Harga kompetitif untuk kualitas premium</li>
+        <li>Owner memiliki passion & pengetahuan kuliner</li>
+        <li>Strategi online-first mengurangi biaya sewa mahal</li>
+        <li>Medan = kota kuliner, pasar besar</li>
+        <li>Halal certified, menjangkau mayoritas pasar</li>
+      </ul>
+    </div>
+    <div class="swot-card weakness">
+      <h4>&#x26A0; WEAKNESSES (Kelemahan)</h4>
+      <ul>
+        <li>Brand baru, belum dikenal</li>
+        <li>Kapasitas produksi awal terbatas</li>
+        <li>Ketergantungan pada platform delivery (biaya komisi)</li>
+        <li>Shelf life produk fresh terbatas</li>
+        <li>Butuh edukasi pasar untuk varian fusion</li>
+        <li>Modal awal terbatas untuk marketing masif</li>
+      </ul>
+    </div>
+    <div class="swot-card opportunity">
+      <h4>&#x1F680; OPPORTUNITIES (Peluang)</h4>
+      <ul>
+        <li>Tren dimsum Indonesia terus naik (Google Trends +35% YoY)</li>
+        <li>Penetrasi food delivery di Medan sangat tinggi</li>
+        <li>Pasar frozen food booming pasca-pandemi</li>
+        <li>Kolaborasi dengan food influencer Medan</li>
+        <li>Ekspansi ke Binjai, Pematang Siantar, Berastagi</li>
+        <li>Catering corporate & event</li>
+        <li>Franchise model di tahun ke-3</li>
+      </ul>
+    </div>
+    <div class="swot-card threat">
+      <h4>&#x26A1; THREATS (Ancaman)</h4>
+      <ul>
+        <li>Kompetitor dimsum existing di Medan</li>
+        <li>Kenaikan harga bahan baku</li>
+        <li>Perubahan kebijakan platform delivery</li>
+        <li>Dimsum pabrik/frozen murah dari supermarket</li>
+        <li>Tren kuliner yang cepat berganti</li>
+        <li>Risiko food safety jika tidak terkontrol</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FINANCIAL PLAN -->
+<div class="page">
+  <h2 class="section-title">4. Rencana Keuangan</h2>
+
+  <div class="financial-summary">
+    <div class="fin-card">
+      <div class="amount">Rp 85 Juta</div>
+      <div class="label">Modal Awal</div>
+    </div>
+    <div class="fin-card">
+      <div class="amount">Rp 45-60 Juta</div>
+      <div class="label">Proyeksi Revenue/Bulan (Bulan ke-6)</div>
+    </div>
+    <div class="fin-card">
+      <div class="amount">8-10 Bulan</div>
+      <div class="label">Break Even Point</div>
+    </div>
+  </div>
+
+  <h3>A. Modal Awal (Investasi)</h3>
+  <table>
+    <tr><th>Item</th><th>Biaya</th></tr>
+    <tr><td>Renovasi dapur produksi (rumah/ruko kecil)</td><td>Rp 15.000.000</td></tr>
+    <tr><td>Peralatan masak (steamer industrial, wok, dll)</td><td>Rp 12.000.000</td></tr>
+    <tr><td>Freezer & kulkas (2 unit)</td><td>Rp 10.000.000</td></tr>
+    <tr><td>Packaging supplies (3 bulan)</td><td>Rp 5.000.000</td></tr>
+    <tr><td>Bahan baku awal (1 bulan)</td><td>Rp 8.000.000</td></tr>
+    <tr><td>Sertifikasi (PIRT, Halal, BPOM)</td><td>Rp 5.000.000</td></tr>
+    <tr><td>Branding & desain (logo, packaging, menu)</td><td>Rp 5.000.000</td></tr>
+    <tr><td>Website & sosial media setup</td><td>Rp 3.000.000</td></tr>
+    <tr><td>Marketing launch (bulan 1-2)</td><td>Rp 10.000.000</td></tr>
+    <tr><td>Modal kerja cadangan</td><td>Rp 12.000.000</td></tr>
+    <tr><td><strong>TOTAL INVESTASI</strong></td><td><strong>Rp 85.000.000</strong></td></tr>
+  </table>
+
+  <h3>B. Biaya Operasional Bulanan</h3>
+  <table>
+    <tr><th>Item</th><th>Biaya/Bulan</th></tr>
+    <tr><td>Bahan baku</td><td>Rp 12.000.000</td></tr>
+    <tr><td>Gaji karyawan (2 orang + owner)</td><td>Rp 8.000.000</td></tr>
+    <tr><td>Sewa tempat/dapur</td><td>Rp 3.000.000</td></tr>
+    <tr><td>Gas, listrik, air</td><td>Rp 2.000.000</td></tr>
+    <tr><td>Packaging</td><td>Rp 3.000.000</td></tr>
+    <tr><td>Marketing & iklan digital</td><td>Rp 3.000.000</td></tr>
+    <tr><td>Komisi platform delivery (~20%)</td><td>Rp 6.000.000</td></tr>
+    <tr><td>Lain-lain</td><td>Rp 2.000.000</td></tr>
+    <tr><td><strong>TOTAL OPERASIONAL</strong></td><td><strong>Rp 39.000.000</strong></td></tr>
+  </table>
+
+  <h3>C. Proyeksi Pendapatan</h3>
+  <table>
+    <tr><th>Bulan</th><th>Order/Hari</th><th>Avg. Ticket</th><th>Revenue/Bulan</th><th>Profit</th></tr>
+    <tr><td>Bulan 1-2</td><td>15-20</td><td>Rp 45.000</td><td>Rp 20-27 Juta</td><td style="color:red">-Rp 12-19 Juta</td></tr>
+    <tr><td>Bulan 3-4</td><td>25-35</td><td>Rp 50.000</td><td>Rp 37-52 Juta</td><td style="color:red">-Rp 2 Juta s/d +Rp 13 Juta</td></tr>
+    <tr><td>Bulan 5-6</td><td>35-45</td><td>Rp 55.000</td><td>Rp 57-74 Juta</td><td style="color:green">+Rp 18-35 Juta</td></tr>
+    <tr><td>Bulan 7-12</td><td>45-60</td><td>Rp 55.000</td><td>Rp 74-99 Juta</td><td style="color:green">+Rp 35-60 Juta</td></tr>
+  </table>
+
+  <div class="highlight-box">
+    <strong>Break Even Point:</strong> Estimasi bulan ke-8 hingga ke-10 dengan asumsi pertumbuhan order 20-30% per bulan di fase awal melalui marketing agresif di platform digital.
+  </div>
+</div>
+
+<!-- MARKETING STRATEGY -->
+<div class="page">
+  <h2 class="section-title">5. Strategi Pemasaran</h2>
+
+  <h3>A. Platform Digital (Online-First)</h3>
+  <table>
+    <tr><th>Platform</th><th>Strategi</th><th>Target</th></tr>
+    <tr><td><strong>GoFood</strong></td><td>Top Picks, promo cashback, flash sale</td><td>Platform utama #1</td></tr>
+    <tr><td><strong>GrabFood</strong></td><td>GrabKitchen partnership, voucher</td><td>Platform utama #2</td></tr>
+    <tr><td><strong>ShopeeFood</strong></td><td>Free ongkir campaign, bundling</td><td>Platform growth</td></tr>
+    <tr><td><strong>Instagram</strong></td><td>Konten visual, reels, stories harian</td><td>Brand awareness</td></tr>
+    <tr><td><strong>TikTok</strong></td><td>Behind-the-scenes, mukbang, viral content</td><td>Viral reach</td></tr>
+    <tr><td><strong>WhatsApp Business</strong></td><td>Direct order, broadcast promo</td><td>Repeat customers</td></tr>
+    <tr><td><strong>Tokopedia/Shopee</strong></td><td>Frozen dimsum nationwide</td><td>Revenue tambahan</td></tr>
+  </table>
+
+  <h3>B. Strategi Konten Media Sosial</h3>
+  <ul>
+    <li><strong>Senin:</strong> Menu highlight + promo of the week</li>
+    <li><strong>Selasa:</strong> Behind the kitchen (proses pembuatan)</li>
+    <li><strong>Rabu:</strong> Customer review/testimonial</li>
+    <li><strong>Kamis:</strong> Fun facts tentang dimsum + edukasi</li>
+    <li><strong>Jumat:</strong> Weekend promo announcement</li>
+    <li><strong>Sabtu:</strong> Reels/TikTok mukbang or food review</li>
+    <li><strong>Minggu:</strong> Story poll/engagement + flash promo</li>
+  </ul>
+
+  <h3>C. Launch Campaign (Bulan 1-2)</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <strong>Minggu 1-2: Soft Launch</strong>
+      <p>Free tasting untuk 50 food blogger Medan, build hype di Instagram</p>
+    </div>
+    <div class="timeline-item">
+      <strong>Minggu 3: Grand Launch</strong>
+      <p>Promo "Buy 1 Get 1" di GoFood & GrabFood, Instagram Live cooking show</p>
+    </div>
+    <div class="timeline-item">
+      <strong>Minggu 4-6: Influencer Wave</strong>
+      <p>Kolaborasi 10 food influencer Medan, paid promotion TikTok</p>
+    </div>
+    <div class="timeline-item">
+      <strong>Minggu 7-8: Community Building</strong>
+      <p>WhatsApp group VIP customers, loyalty program launch</p>
+    </div>
+  </div>
+</div>
+
+<!-- OPERATIONS -->
+<div class="page">
+  <h2 class="section-title">6. Rencana Operasional</h2>
+
+  <h3>A. Lokasi & Fasilitas</h3>
+  <p>Cloud kitchen / dapur produksi di area strategis Medan (Medan Kota / Medan Helvetia / Sunggal). Tidak memerlukan dine-in area di fase awal untuk menghemat biaya.</p>
+
+  <h3>B. Tim</h3>
+  <table>
+    <tr><th>Posisi</th><th>Jumlah</th><th>Tugas</th></tr>
+    <tr><td>Owner/Head Chef</td><td>1 (Yanti Lubis)</td><td>Resep, QC, manajemen</td></tr>
+    <tr><td>Asisten Dapur</td><td>2</td><td>Produksi, prep, packaging</td></tr>
+    <tr><td>Admin Sosmed & Order</td><td>1</td><td>Kelola platform, CS, konten</td></tr>
+  </table>
+
+  <h3>C. Alur Operasional Harian</h3>
+  <table>
+    <tr><th>Waktu</th><th>Aktivitas</th></tr>
+    <tr><td>05:00 - 07:00</td><td>Belanja bahan baku segar di pasar</td></tr>
+    <tr><td>07:00 - 09:00</td><td>Prep bahan (cincang, cuci, marinasi)</td></tr>
+    <tr><td>09:00 - 12:00</td><td>Produksi batch 1 (untuk lunch delivery)</td></tr>
+    <tr><td>12:00 - 14:00</td><td>Packaging & fulfillment lunch orders</td></tr>
+    <tr><td>14:00 - 16:00</td><td>Produksi batch 2 (dinner + frozen)</td></tr>
+    <tr><td>16:00 - 20:00</td><td>Fulfillment dinner orders</td></tr>
+    <tr><td>20:00 - 21:00</td><td>Cleanup, inventory check, prep for tomorrow</td></tr>
+  </table>
+
+  <h3>D. Milestone 12 Bulan</h3>
+  <table>
+    <tr><th>Bulan</th><th>Target</th></tr>
+    <tr><td>Bulan 1</td><td>Launch di GoFood & GrabFood, 15 orders/hari</td></tr>
+    <tr><td>Bulan 3</td><td>Sertifikasi Halal, 30 orders/hari, launch frozen line</td></tr>
+    <tr><td>Bulan 6</td><td>50 orders/hari, ekspansi ShopeeFood & Tokopedia</td></tr>
+    <tr><td>Bulan 9</td><td>Catering corporate, 60+ orders/hari</td></tr>
+    <tr><td>Bulan 12</td><td>Break-even tercapai, planning outlet fisik/franchise</td></tr>
+  </table>
+</div>
+
+<!-- LEGAL -->
+<div class="page">
+  <h2 class="section-title">7. Aspek Legal & Perizinan</h2>
+  <ul>
+    <li><strong>NIB (Nomor Induk Berusaha)</strong> &mdash; via OSS (Online Single Submission)</li>
+    <li><strong>PIRT</strong> &mdash; Izin Produksi Pangan Industri Rumah Tangga dari Dinkes</li>
+    <li><strong>Sertifikat Halal MUI</strong> &mdash; via BPJPH (Badan Penyelenggara Jaminan Produk Halal)</li>
+    <li><strong>BPOM</strong> &mdash; Untuk produk frozen yang dijual online/retail</li>
+    <li><strong>NPWP</strong> &mdash; Nomor Pokok Wajib Pajak usaha</li>
+    <li><strong>Merek Dagang</strong> &mdash; Pendaftaran merek "DY Dimsum" di DJKI</li>
+  </ul>
+
+  <h2 class="section-title" style="margin-top:40px;">8. Kesimpulan</h2>
+  <div class="highlight-box">
+    <p><strong>Dimsum Yanti Lubis (DY Dimsum)</strong> memiliki peluang besar untuk menjadi pemain utama di pasar dimsum Medan. Dengan strategi online-first, produk premium handmade, dan inovasi rasa fusion yang unik, kami yakin dapat mencapai break-even dalam 8-10 bulan dan mulai ekspansi di tahun kedua.</p>
+    <p style="margin-top:15px;">Medan sebagai kota kuliner dengan penetrasi food delivery yang tinggi menjadi landasan sempurna untuk membangun brand dimsum premium yang berkelanjutan.</p>
+  </div>
+</div>
+
+<footer class="doc-footer">
+  <p><strong>Dimsum Yanti Lubis (DY Dimsum)</strong></p>
+  <p>Medan, Sumatera Utara | Indonesia</p>
+  <p style="margin-top:10px; opacity:0.7;">Business Plan 2026 &mdash; Confidential</p>
+</footer>
+
+</body>
+</html>
