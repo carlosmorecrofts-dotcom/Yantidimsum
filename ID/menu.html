@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu - DY Dimsum | Medan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap');
+:root{--red:#C41E3A;--dark-red:#8B0000;--gold:#D4A017;--dark:#1a1a2e;--cream:#FFF8F0;--warm:#FFF3E0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:white;min-height:100vh;}
+
+/* HEADER */
+.menu-header{
+  text-align:center;padding:60px 30px 40px;
+  background:linear-gradient(180deg,var(--dark) 0%,#16213e 100%);
+  position:relative;overflow:hidden;
+}
+.menu-header::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath d='M50 10 Q60 0 70 10 Q80 20 70 30 Q60 40 50 30 Q40 20 50 10' fill='none' stroke='%23D4A01708' stroke-width='1'/%3E%3C/svg%3E");
+}
+.menu-header *{position:relative;}
+.logo-mark{
+  width:80px;height:80px;margin:0 auto 20px;
+  background:linear-gradient(135deg,var(--gold),#E8A317);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-weight:900;color:var(--red);font-size:24px;
+  box-shadow:0 10px 30px rgba(212,160,23,0.3);
+}
+.menu-header h1{font-family:'Playfair Display',serif;font-size:2.8em;margin-bottom:5px;}
+.menu-header h1 span{color:var(--gold);}
+.menu-header .tagline{font-family:'Dancing Script',cursive;color:var(--gold);font-size:1.3em;margin-bottom:8px;}
+.menu-header .sub{opacity:0.6;font-size:0.9em;letter-spacing:2px;}
+.divider-gold{width:80px;height:2px;background:var(--gold);margin:20px auto;opacity:0.5;}
+.ornament{color:var(--gold);font-size:1.5em;opacity:0.4;margin:10px 0;}
+
+/* SECTION TITLES */
+.section{max-width:1100px;margin:0 auto;padding:0 20px 50px;}
+.section-title{
+  text-align:center;margin-bottom:40px;padding-top:40px;
+}
+.section-title h2{
+  font-family:'Playfair Display',serif;font-size:2em;color:white;
+  display:inline-block;position:relative;
+}
+.section-title h2::before,.section-title h2::after{
+  content:'';position:absolute;top:50%;width:40px;height:1px;background:var(--gold);opacity:0.5;
+}
+.section-title h2::before{right:calc(100% + 15px);}
+.section-title h2::after{left:calc(100% + 15px);}
+.section-title p{color:rgba(255,255,255,0.5);font-size:0.9em;margin-top:8px;}
+
+/* MENU GRID */
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.menu-item{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;overflow:hidden;
+  display:flex;transition:all 0.3s;position:relative;
+}
+.menu-item:hover{
+  background:rgba(255,255,255,0.08);
+  border-color:rgba(212,160,23,0.3);
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+.menu-item img{
+  width:160px;height:160px;object-fit:cover;flex-shrink:0;
+}
+.menu-item-info{padding:20px;display:flex;flex-direction:column;justify-content:center;flex:1;}
+.menu-item-info h3{
+  font-family:'Playfair Display',serif;font-size:1.15em;color:white;margin-bottom:4px;
+}
+.menu-item-info .desc{font-size:0.85em;color:rgba(255,255,255,0.55);line-height:1.5;margin-bottom:10px;}
+.menu-item-info .price{font-size:1.2em;font-weight:700;color:var(--gold);}
+.menu-item-info .price small{font-weight:400;font-size:0.7em;color:rgba(255,255,255,0.4);}
+.badge-tag{
+  position:absolute;top:12px;left:12px;
+  background:var(--red);color:white;
+  padding:4px 12px;border-radius:20px;
+  font-size:0.7em;font-weight:700;letter-spacing:1px;
+  box-shadow:0 4px 15px rgba(196,30,58,0.4);
+}
+.badge-tag.signature{background:linear-gradient(135deg,var(--gold),#B8860B);color:var(--dark);}
+.badge-tag.new{background:#2E7D32;}
+.badge-tag.spicy{background:#E65100;}
+
+/* PAKET SECTION */
+.paket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.paket-card{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;padding:30px;text-align:center;transition:all 0.3s;position:relative;
+}
+.paket-card:hover{background:rgba(255,255,255,0.08);transform:translateY(-3px);}
+.paket-card.featured{border:2px solid var(--gold);background:rgba(212,160,23,0.05);}
+.paket-card .icon{font-size:2.5em;margin-bottom:12px;}
+.paket-card h3{font-family:'Playfair Display',serif;font-size:1.2em;margin-bottom:8px;}
+.paket-card .contents{font-size:0.85em;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:15px;}
+.paket-card .price{font-size:1.6em;font-weight:700;color:var(--gold);}
+.paket-card .pax{font-size:0.8em;color:rgba(255,255,255,0.4);margin-top:5px;}
+.paket-card .save{
+  display:inline-block;background:var(--red);color:white;
+  padding:3px 10px;border-radius:10px;font-size:0.7em;font-weight:600;margin-top:8px;
+}
+.featured-badge{
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:var(--dark);padding:4px 16px;
+  border-radius:0 0 10px 10px;font-size:0.7em;font-weight:700;letter-spacing:1px;
+}
+
+/* FROZEN */
+.frozen-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.frozen-card{
+  background:linear-gradient(135deg,rgba(21,101,192,0.1),rgba(13,71,161,0.1));
+  border:1px solid rgba(21,101,192,0.2);
+  border-radius:16px;padding:25px;display:flex;align-items:center;gap:20px;
+}
+.frozen-card .ice{font-size:2.5em;}
+.frozen-card h3{font-family:'Playfair Display',serif;font-size:1.1em;margin-bottom:4px;}
+.frozen-card .desc{font-size:0.83em;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+.frozen-card .price{font-size:1.1em;font-weight:700;color:var(--gold);}
+
+/* SAUS */
+.saus-row{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;}
+.saus-item{text-align:center;width:120px;}
+.saus-item .circle{
+  width:80px;height:80px;border-radius:50%;margin:0 auto 10px;
+  display:flex;align-items:center;justify-content:center;font-size:2em;
+  border:2px solid rgba(255,255,255,0.1);
+}
+.saus-item h4{font-size:0.85em;margin-bottom:4px;}
+.saus-item p{font-size:0.75em;color:rgba(255,255,255,0.4);}
+
+/* ADD ONS */
+.addon-row{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;}
+.addon{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;padding:15px 20px;text-align:center;min-width:130px;
+}
+.addon .emoji{font-size:1.5em;margin-bottom:5px;}
+.addon h4{font-size:0.85em;margin-bottom:3px;}
+.addon .price{color:var(--gold);font-weight:600;font-size:0.9em;}
+
+/* HAMPERS PREVIEW */
+.hampers-banner{
+  background:linear-gradient(135deg,var(--red),var(--dark-red));
+  border-radius:20px;padding:40px;text-align:center;margin-top:10px;
+  position:relative;overflow:hidden;
+}
+.hampers-banner::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23ffffff08'/%3E%3C/svg%3E");
+}
+.hampers-banner *{position:relative;}
+.hampers-banner h2{font-family:'Playfair Display',serif;font-size:1.8em;margin-bottom:10px;}
+.hampers-banner p{opacity:0.85;font-size:0.95em;margin-bottom:20px;}
+.hampers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:700px;margin:0 auto;}
+.hamper-mini{
+  background:rgba(255,255,255,0.1);border-radius:12px;padding:18px;text-align:center;
+}
+.hamper-mini h4{font-size:0.9em;margin:8px 0 4px;}
+.hamper-mini .price{color:var(--gold);font-weight:700;}
+
+/* ORDER CTA */
+.order-section{
+  text-align:center;padding:60px 20px;
+  background:linear-gradient(180deg,var(--dark),#0a0a1a);
+}
+.order-section h2{font-family:'Playfair Display',serif;font-size:2em;margin-bottom:15px;}
+.order-section p{opacity:0.7;margin-bottom:30px;}
+.order-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.order-btns a{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;border-radius:12px;text-decoration:none;
+  font-weight:600;font-size:0.95em;color:white;transition:all 0.3s;
+}
+.order-btns a:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.4);}
+.bg-gofood{background:linear-gradient(135deg,#00AA13,#008A0E);}
+.bg-grab{background:linear-gradient(135deg,#00B14F,#009A44);}
+.bg-shopee{background:linear-gradient(135deg,#EE4D2D,#D73211);}
+.bg-wa{background:linear-gradient(135deg,#25D366,#128C7E);}
+
+/* FOOTER */
+.menu-footer{text-align:center;padding:30px;opacity:0.4;font-size:0.8em;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .menu-grid{grid-template-columns:1fr;}
+  .menu-item img{width:120px;height:120px;}
+  .paket-grid{grid-template-columns:1fr;}
+  .frozen-grid{grid-template-columns:1fr;}
+  .hampers-grid{grid-template-columns:1fr;}
+  .menu-header h1{font-size:2em;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="menu-header">
+  <div class="logo-mark">DY</div>
+  <div class="tagline">Handmade Premium</div>
+  <h1>DY <span>Dimsum</span></h1>
+  <div class="sub">MEDAN &bull; EST. 2026</div>
+  <div class="divider-gold"></div>
+  <div class="ornament">&#x2766;</div>
+  <p style="opacity:0.5;font-size:0.85em;max-width:500px;margin:0 auto;">Dimsum premium handmade, dibuat fresh setiap hari<br>dengan bahan pilihan terbaik. 100% Halal.</p>
+</div>
+
+<!-- SIGNATURE MENU -->
+<div class="section">
+  <div class="section-title">
+    <h2>Signature Menu</h2>
+    <p>Dimsum handmade, fresh daily, tanpa pengawet</p>
+  </div>
+
+  <div class="menu-grid">
+    <!-- Hakau -->
+    <div class="menu-item">
+      <span class="badge-tag">BEST SELLER</span>
+      <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=320&h=320&fit=crop" alt="Hakau Premium">
+      <div class="menu-item-info">
+        <h3>Hakau Premium</h3>
+        <div class="desc">Udang segar pilihan dalam kulit transparan tipis. Resep klasik Cantonese, dikukus sempurna.</div>
+        <div class="price">Rp 28.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Siomay -->
+    <div class="menu-item">
+      <span class="badge-tag">FAVORIT</span>
+      <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=320&h=320&fit=crop" alt="Siomay Ayam Special">
+      <div class="menu-item-info">
+        <h3>Siomay Ayam Special</h3>
+        <div class="desc">Ayam kampung cincang halus dengan jamur shiitake premium. Juicy, gurih, lembut.</div>
+        <div class="price">Rp 22.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Andaliman -->
+    <div class="menu-item">
+      <span class="badge-tag signature">SIGNATURE</span>
+      <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=320&h=320&fit=crop" alt="Dimsum Andaliman">
+      <div class="menu-item-info">
+        <h3>Dimsum Andaliman</h3>
+        <div class="desc">Kreasi eksklusif! Siomay dengan sentuhan rempah andaliman khas Batak. Rasa yang tidak ada di tempat lain.</div>
+        <div class="price">Rp 25.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Lumpia -->
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1576577445504-6af96477db52?w=320&h=320&fit=crop" alt="Lumpia Udang Crispy">
+      <div class="menu-item-info">
+        <h3>Lumpia Udang Crispy</h3>
+        <div class="desc">Kulit super renyah, isian udang premium melimpah. Cocok untuk yang suka kriuk!</div>
+        <div class="price">Rp 25.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Ceker -->
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=320&h=320&fit=crop" alt="Ceker Ayam Saus Tiram">
+      <div class="menu-item-info">
+        <h3>Ceker Saus Tiram</h3>
+        <div class="desc">Ceker ayam empuk, bumbu saus tiram meresap sempurna. Comfort food yang bikin nagih.</div>
+        <div class="price">Rp 20.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Bakpao -->
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1582169505937-b9992bd01ed9?w=320&h=320&fit=crop" alt="Bakpao Mini">
+      <div class="menu-item-info">
+        <h3>Bakpao Mini Ayam BBQ</h3>
+        <div class="desc">Bakpao lembut mengembang sempurna, isi ayam BBQ manis-gurih. Favorit anak-anak!</div>
+        <div class="price">Rp 18.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Taro -->
+    <div class="menu-item">
+      <span class="badge-tag new">SWEET</span>
+      <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=320&h=320&fit=crop" alt="Taro Ball">
+      <div class="menu-item-info">
+        <h3>Taro Ball</h3>
+        <div class="desc">Talas lembut bertekstur, isian kacang manis natural. Dessert dim sum yang sempurna.</div>
+        <div class="price">Rp 20.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Cheong Fun -->
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1540648639573-8c848de23f0a?w=320&h=320&fit=crop" alt="Cheong Fun">
+      <div class="menu-item-info">
+        <h3>Cheong Fun</h3>
+        <div class="desc">Rice noodle roll lembut dan silky, isian udang atau ayam. Disajikan dengan kecap manis.</div>
+        <div class="price">Rp 24.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Siomay Arsik -->
+    <div class="menu-item">
+      <span class="badge-tag signature">SIGNATURE</span>
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=320&h=320&fit=crop" alt="Siomay Arsik">
+      <div class="menu-item-info">
+        <h3>Siomay Arsik</h3>
+        <div class="desc">Fusion unik! Siomay ikan ala arsik Batak dengan bumbu kuning khas. Rasa Medan autentik.</div>
+        <div class="price">Rp 25.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+
+    <!-- Dimsum Mentai -->
+    <div class="menu-item">
+      <span class="badge-tag spicy">MENTAI</span>
+      <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=320&h=320&fit=crop" alt="Dimsum Mentai">
+      <div class="menu-item-info">
+        <h3>Dimsum Mentai</h3>
+        <div class="desc">Siomay di-torch dengan saus mentai creamy & spicy. Viral dan addictive! Terinspirasi Kane Dimsum.</div>
+        <div class="price">Rp 28.000 <small>/box 4pcs</small></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAUS -->
+<div class="section">
+  <div class="section-title">
+    <h2>Saus & Condiments</h2>
+    <p>Pelengkap sempurna untuk setiap gigitan</p>
+  </div>
+  <div class="saus-row">
+    <div class="saus-item">
+      <div class="circle" style="background:rgba(196,30,58,0.15);">&#x1F336;</div>
+      <h4>Sambal Medan</h4>
+      <p>Pedas nampol!</p>
+    </div>
+    <div class="saus-item">
+      <div class="circle" style="background:rgba(139,69,19,0.15);">&#x1F943;</div>
+      <h4>Kecap Asin</h4>
+      <p>Classic dip</p>
+    </div>
+    <div class="saus-item">
+      <div class="circle" style="background:rgba(212,160,23,0.15);">&#x1F9C8;</div>
+      <h4>Saus Tiram</h4>
+      <p>Gurih manis</p>
+    </div>
+    <div class="saus-item">
+      <div class="circle" style="background:rgba(230,81,0,0.15);">&#x1F525;</div>
+      <h4>Chili Oil</h4>
+      <p>Homemade!</p>
+    </div>
+    <div class="saus-item">
+      <div class="circle" style="background:rgba(46,125,50,0.15);">&#x1F96B;</div>
+      <h4>Vinegar Ginger</h4>
+      <p>Segar pedas</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAKET HEMAT -->
+<div class="section">
+  <div class="section-title">
+    <h2>Paket Hemat</h2>
+    <p>Lebih banyak, lebih hemat!</p>
+  </div>
+  <div class="paket-grid">
+    <div class="paket-card">
+      <div class="icon">&#x1F961;</div>
+      <h3>Paket Hemat</h3>
+      <div class="contents">3 box dimsum pilihan<br>1 saus special<br>1 tissue pack</div>
+      <div class="price">Rp 65.000</div>
+      <div class="pax">Untuk 1-2 orang</div>
+      <div class="save">Hemat Rp 10.000</div>
+    </div>
+    <div class="paket-card featured">
+      <div class="featured-badge">MOST POPULAR</div>
+      <div class="icon">&#x1F37D;</div>
+      <h3>Paket Keluarga</h3>
+      <div class="contents">5 box dimsum pilihan<br>2 saus special<br>FREE teh botol<br>FREE sambal Medan</div>
+      <div class="price">Rp 99.000</div>
+      <div class="pax">Untuk 3-4 orang</div>
+      <div class="save">Hemat Rp 31.000</div>
+    </div>
+    <div class="paket-card">
+      <div class="icon">&#x1F451;</div>
+      <h3>Paket Sultan</h3>
+      <div class="contents">8 box ALL varian<br>Saus komplit (5 jenis)<br>FREE teh botol x2<br>FREE dessert</div>
+      <div class="price">Rp 155.000</div>
+      <div class="pax">Untuk 5-8 orang</div>
+      <div class="save">Hemat Rp 50.000+</div>
+    </div>
+  </div>
+</div>
+
+<!-- FROZEN -->
+<div class="section">
+  <div class="section-title">
+    <h2>Frozen Ready-to-Cook</h2>
+    <p>Dimsum premium di freezer kamu, siap kukus kapan saja</p>
+  </div>
+  <div class="frozen-grid">
+    <div class="frozen-card">
+      <div class="ice">&#x1F9CA;</div>
+      <div>
+        <h3>Frozen Box 10pcs</h3>
+        <div class="desc">10 pcs dimsum campur (2 varian) &bull; Shelf life 90 hari</div>
+        <div class="price">Rp 55.000</div>
+      </div>
+    </div>
+    <div class="frozen-card">
+      <div class="ice">&#x1F4E6;</div>
+      <div>
+        <h3>Frozen Family 20pcs</h3>
+        <div class="desc">20 pcs, 4 varian pilihan &bull; Shelf life 90 hari</div>
+        <div class="price">Rp 99.000</div>
+      </div>
+    </div>
+    <div class="frozen-card">
+      <div class="ice">&#x1F48E;</div>
+      <div>
+        <h3>Frozen Premium 30pcs</h3>
+        <div class="desc">30 pcs, ALL varian &bull; Include saus &bull; Shelf life 90 hari</div>
+        <div class="price">Rp 140.000</div>
+      </div>
+    </div>
+    <div class="frozen-card">
+      <div class="ice">&#x1F381;</div>
+      <div>
+        <h3>Frozen Mentai Box 10pcs</h3>
+        <div class="desc">10 pcs dimsum + saus mentai sachet &bull; Tinggal torch!</div>
+        <div class="price">Rp 68.000</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADD ONS -->
+<div class="section">
+  <div class="section-title">
+    <h2>Add-Ons</h2>
+    <p>Tambahan untuk melengkapi pesanan</p>
+  </div>
+  <div class="addon-row">
+    <div class="addon"><div class="emoji">&#x1F375;</div><h4>Teh Botol</h4><div class="price">Rp 5.000</div></div>
+    <div class="addon"><div class="emoji">&#x1F525;</div><h4>Extra Chili Oil</h4><div class="price">Rp 8.000</div></div>
+    <div class="addon"><div class="emoji">&#x1F336;</div><h4>Sambal Medan</h4><div class="price">Rp 5.000</div></div>
+    <div class="addon"><div class="emoji">&#x1F35A;</div><h4>Nasi Putih</h4><div class="price">Rp 5.000</div></div>
+    <div class="addon"><div class="emoji">&#x1F962;</div><h4>Sumpit Premium</h4><div class="price">Rp 3.000</div></div>
+    <div class="addon"><div class="emoji">&#x1F9C2;</div><h4>Extra Saus (any)</h4><div class="price">Rp 3.000</div></div>
+  </div>
+</div>
+
+<!-- HAMPERS -->
+<div class="section">
+  <div class="hampers-banner">
+    <h2>Hampers & Gift Box</h2>
+    <p>Perfect untuk Imlek, Lebaran, Natal, dan Corporate Gifting</p>
+    <div class="hampers-grid">
+      <div class="hamper-mini">
+        <div style="font-size:1.8em;">&#x1F381;</div>
+        <h4>Classic</h4>
+        <div class="price">Rp 150.000</div>
+      </div>
+      <div class="hamper-mini" style="border:1px solid rgba(212,160,23,0.4);">
+        <div style="font-size:1.8em;">&#x1F380;</div>
+        <h4>Premium</h4>
+        <div class="price">Rp 288.000</div>
+      </div>
+      <div class="hamper-mini">
+        <div style="font-size:1.8em;">&#x1F451;</div>
+        <h4>Sultan</h4>
+        <div class="price">Rp 488.000</div>
+      </div>
+    </div>
+    <p style="margin-top:20px;font-size:0.85em;opacity:0.7;">Custom hampers tersedia untuk order 10+. Hubungi via WhatsApp.</p>
+  </div>
+</div>
+
+<!-- ORDER -->
+<div class="order-section">
+  <div class="ornament">&#x2766;</div>
+  <h2>Pesan Sekarang</h2>
+  <p>Delivery ke seluruh area Medan & sekitarnya</p>
+  <div class="order-btns">
+    <a href="https://gofood.co.id/" class="bg-gofood" target="_blank">GoFood</a>
+    <a href="https://food.grab.com/" class="bg-grab" target="_blank">GrabFood</a>
+    <a href="https://shopeefood.co.id/" class="bg-shopee" target="_blank">ShopeeFood</a>
+    <a href="https://wa.me/6281234567890?text=Halo%20DY%20Dimsum!%20Saya%20mau%20pesan" class="bg-wa" target="_blank">WhatsApp</a>
+  </div>
+  <p style="margin-top:25px;font-size:0.85em;opacity:0.4;">Buka setiap hari 10.00 - 21.00 WIB</p>
+</div>
+
+<div class="menu-footer">
+  <p>&copy; 2026 DY Dimsum - Dimsum Yanti Lubis | Medan, Sumatera Utara</p>
+  <p>100% Halal &bull; Handmade Premium &bull; Fresh Daily</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rencana Packaging - DY Dimsum | Medan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+:root{--red:#C41E3A;--gold:#D4A017;--dark:#1a1a2e;--cream:#FFF8F0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#333;background:#fff;line-height:1.7;}
+.cover{background:linear-gradient(135deg,var(--dark),#16213e);color:white;padding:80px 40px;text-align:center;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='%23D4A01715'/%3E%3C/svg%3E");}
+.cover *{position:relative;}
+.cover h1{font-family:'Playfair Display',serif;font-size:3em;margin-bottom:10px;}
+.cover h2{color:var(--gold);font-weight:300;letter-spacing:3px;font-size:1.2em;}
+.cover p{opacity:0.7;margin-top:15px;}
+.page{max-width:1000px;margin:0 auto;padding:50px 30px;}
+h2.st{font-family:'Playfair Display',serif;font-size:2em;color:var(--red);border-bottom:3px solid var(--gold);padding-bottom:12px;margin:40px 0 25px;}
+h3{color:var(--dark);margin:25px 0 12px;font-size:1.2em;}
+h4{color:var(--red);margin:18px 0 8px;}
+p,li{margin-bottom:10px;font-size:0.95em;}
+ul{padding-left:25px;}
+table{width:100%;border-collapse:collapse;margin:15px 0;}
+th{background:var(--red);color:white;padding:12px;text-align:left;font-weight:600;}
+td{padding:10px 12px;border-bottom:1px solid #eee;font-size:0.93em;}
+tr:nth-child(even){background:#faf5f0;}
+.box{background:linear-gradient(135deg,#fff8f0,#fff3e0);border-left:4px solid var(--gold);padding:20px 25px;border-radius:0 10px 10px 0;margin:20px 0;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:20px 0;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin:20px 0;}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.08);border:1px solid #f0e8e0;}
+.card-header{padding:20px 25px;color:white;font-weight:700;font-size:1.1em;}
+.card-body{padding:20px 25px;}
+.card-body p{font-size:0.9em;}
+.red-bg{background:linear-gradient(135deg,var(--red),#8B0000);}
+.gold-bg{background:linear-gradient(135deg,var(--gold),#B8860B);}
+.dark-bg{background:linear-gradient(135deg,var(--dark),#16213e);}
+.green-bg{background:linear-gradient(135deg,#2E7D32,#1B5E20);}
+.blue-bg{background:linear-gradient(135deg,#1565C0,#0D47A1);}
+.orange-bg{background:linear-gradient(135deg,#E65100,#BF360C);}
+.pink-bg{background:linear-gradient(135deg,#AD1457,#880E4F);}
+.tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:0.75em;font-weight:600;margin:2px;}
+.tag-red{background:#ffe0e0;color:var(--red);}
+.tag-gold{background:#fff3e0;color:#B8860B;}
+.tag-green{background:#e0f2e0;color:#2E7D32;}
+.tag-blue{background:#e0e8f2;color:#1565C0;}
+.mockup{border:2px dashed #ddd;border-radius:16px;padding:30px;text-align:center;background:#fafafa;margin:15px 0;}
+.mockup h4{color:var(--dark);margin-bottom:15px;}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:5px 15px;font-size:0.9em;}
+.specs dt{font-weight:600;color:var(--dark);}
+.specs dd{color:#666;}
+.timeline{position:relative;padding-left:30px;}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;background:var(--gold);}
+.timeline-item{position:relative;margin-bottom:20px;}
+.timeline-item::before{content:'';position:absolute;left:-26px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--red);border:3px solid var(--gold);}
+.cost-total{background:var(--dark);color:white;padding:15px 20px;border-radius:10px;text-align:center;margin:20px 0;}
+.cost-total .amount{font-size:1.8em;font-weight:700;color:var(--gold);}
+@media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+@media print{.cover{min-height:auto;padding:40px;}.page{padding:30px 20px;}}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <h1>Rencana Packaging</h1>
+  <h2>DY DIMSUM - DIMSUM YANTI LUBIS</h2>
+  <p>Strategi Kemasan Lengkap: Daily Delivery, Frozen, Hampers & Seasonal</p>
+  <p style="font-size:0.85em;margin-top:25px;">Medan, Sumatera Utara | April 2026</p>
+</div>
+
+<!-- 1. PACKAGING OVERVIEW -->
+<div class="page">
+  <h2 class="st">1. Ringkasan Strategi Packaging</h2>
+
+  <div class="box">
+    <strong>Filosofi Packaging DY Dimsum:</strong> Premium look, food-safe, Instagram-worthy, eco-conscious. Setiap kemasan harus membuat pelanggan merasa mendapatkan pengalaman spesial, bukan sekadar makanan delivery biasa.
+  </div>
+
+  <p>Terinspirasi dari brand seperti <strong>Kane Dimsum Bali</strong> yang sukses dengan packaging hampers premium untuk Idul Fitri, Nyepi, dan Imlek, DY Dimsum akan mengembangkan 5 lini packaging:</p>
+
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-header red-bg">1. Daily Delivery</div>
+      <div class="card-body"><p>Kemasan harian untuk GoFood, GrabFood, ShopeeFood. Fungsional, branded, food-safe.</p><span class="tag tag-red">Everyday</span></div>
+    </div>
+    <div class="card">
+      <div class="card-header gold-bg">2. Frozen Line</div>
+      <div class="card-body"><p>Kemasan frozen untuk Tokopedia, Shopee, dan penjualan langsung. Tahan suhu rendah.</p><span class="tag tag-gold">E-commerce</span></div>
+    </div>
+    <div class="card">
+      <div class="card-header dark-bg">3. Hampers Premium</div>
+      <div class="card-body"><p>Gift box premium untuk Imlek, Lebaran, Natal, dan corporate gifting.</p><span class="tag tag-blue">Seasonal</span></div>
+    </div>
+    <div class="card">
+      <div class="card-header green-bg">4. Catering Box</div>
+      <div class="card-body"><p>Kemasan untuk pesanan besar: arisan, kantor, acara keluarga.</p><span class="tag tag-green">Bulk</span></div>
+    </div>
+    <div class="card">
+      <div class="card-header blue-bg">5. Eco / Reusable</div>
+      <div class="card-body"><p>Lini ramah lingkungan: bamboo steamer reusable, paper-based packaging.</p><span class="tag tag-green">Green</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. DAILY DELIVERY PACKAGING -->
+<div class="page">
+  <h2 class="st">2. Daily Delivery Packaging</h2>
+  <p>Kemasan utama untuk pesanan harian via platform delivery. Harus: anti-tumpah, menjaga suhu, tampil premium, dan mudah di-unboxing.</p>
+
+  <h3>A. Kontainer Makanan</h3>
+  <table>
+    <tr><th>Komponen</th><th>Material</th><th>Ukuran</th><th>Harga/pcs</th></tr>
+    <tr><td>Box utama (4pcs dimsum)</td><td>Kraft paper food box + laminated inner</td><td>15x10x5 cm</td><td>Rp 1.500 - 2.000</td></tr>
+    <tr><td>Box besar (8pcs / paket)</td><td>Kraft paper food box + laminated inner</td><td>20x15x5 cm</td><td>Rp 2.500 - 3.500</td></tr>
+    <tr><td>Cup saus (sambal/kecap)</td><td>PP plastic cup + lid</td><td>30ml</td><td>Rp 300 - 500</td></tr>
+    <tr><td>Inner liner</td><td>Food-grade wax paper / baking paper</td><td>Custom cut</td><td>Rp 200 - 300</td></tr>
+    <tr><td>Outer bag</td><td>Brown kraft paper bag + handle</td><td>25x15x30 cm</td><td>Rp 1.500 - 2.500</td></tr>
+  </table>
+
+  <h3>B. Branding Elements</h3>
+  <table>
+    <tr><th>Item</th><th>Deskripsi</th><th>Harga/pcs</th></tr>
+    <tr><td>Stiker logo (seal)</td><td>Circle sticker 5cm, glossy, logo DY Dimsum + "Handmade Premium"</td><td>Rp 200 - 400</td></tr>
+    <tr><td>Thank you card</td><td>7x10cm, kartu ucapan + QR code Instagram + promo code</td><td>Rp 300 - 500</td></tr>
+    <tr><td>Menu flyer</td><td>A6 size, full menu + WA order link (bypass platform commission)</td><td>Rp 200 - 400</td></tr>
+    <tr><td>Stiker "Pesan via WA"</td><td>QR code ke WhatsApp, tempel di box</td><td>Rp 150 - 300</td></tr>
+    <tr><td>Rubber band / ribbon</td><td>Red ribbon with gold DY print (premium feel)</td><td>Rp 300 - 500</td></tr>
+  </table>
+
+  <div class="mockup">
+    <h4>Daily Delivery Box - Layout</h4>
+    <pre style="text-align:left;font-size:0.85em;background:#f0e8e0;padding:20px;border-radius:10px;display:inline-block;">
++------------------------------------------+
+|  [Brown Kraft Paper Bag with Handle]     |
+|                                          |
+|  +------------------------------------+ |
+|  | [Kraft Food Box - 15x10x5cm]       | |
+|  |  +-----------+-----------+         | |
+|  |  | Dimsum 1  | Dimsum 2  |         | |
+|  |  +-----------+-----------+         | |
+|  |  | Dimsum 3  | Dimsum 4  |         | |
+|  |  +-----------+-----------+         | |
+|  |  [Wax paper liner underneath]      | |
+|  +------------------------------------+ |
+|  [Saus cup x1]  [Sambal cup x1]        |
+|  [Thank you card + menu flyer]          |
+|  [DY Dimsum seal sticker on box]        |
++------------------------------------------+
+    </pre>
+  </div>
+
+  <h3>C. Anti-Tumpah & Suhu</h3>
+  <ul>
+    <li><strong>Heat retention:</strong> Aluminium foil inner wrap untuk menjaga suhu panas 30-45 menit</li>
+    <li><strong>Anti-bocor:</strong> Laminated inner coating pada kraft box, saus dalam sealed cup</li>
+    <li><strong>Ventilasi:</strong> Lubang kecil pada tutup box untuk mencegah embun (dimsum jadi lembek)</li>
+    <li><strong>Stacking:</strong> Box dirancang stackable untuk multi-box order</li>
+  </ul>
+
+  <div class="cost-total">
+    <p>Biaya Packaging per Order (Daily Delivery)</p>
+    <div class="amount">Rp 3.000 - 5.000</div>
+    <p style="opacity:0.7;font-size:0.85em;margin-top:5px;">~6-10% dari average order value Rp 50.000</p>
+  </div>
+</div>
+
+<!-- 3. FROZEN PACKAGING -->
+<div class="page">
+  <h2 class="st">3. Frozen Product Packaging</h2>
+  <p>Kemasan untuk lini produk frozen yang dijual di Tokopedia, Shopee, dan direct order. Harus tahan suhu -18°C, food-safe, dan menarik secara visual.</p>
+
+  <h3>A. Frozen Retail Pack</h3>
+  <table>
+    <tr><th>Produk</th><th>Isi</th><th>Kemasan</th><th>Harga Kemasan</th></tr>
+    <tr><td>Frozen Box 10pcs</td><td>10 pcs dimsum campur</td><td>Standing pouch vacuum + label stiker</td><td>Rp 2.000 - 3.000</td></tr>
+    <tr><td>Frozen Family 20pcs</td><td>20 pcs, 4 varian</td><td>Printed box + vacuum inner bag</td><td>Rp 4.000 - 6.000</td></tr>
+    <tr><td>Frozen Premium 30pcs</td><td>30 pcs, all varian</td><td>Premium box + tray + vacuum bags</td><td>Rp 7.000 - 10.000</td></tr>
+  </table>
+
+  <h3>B. Vacuum Sealing Specs</h3>
+  <dl class="specs">
+    <dt>Material:</dt><dd>PA/PE co-extruded vacuum bag (food grade, BPA free)</dd>
+    <dt>Thickness:</dt><dd>80-120 micron (tebal = lebih tahan tusuk dari frozen item)</dd>
+    <dt>Seal type:</dt><dd>3-side seal with tear notch</dd>
+    <dt>Labeling:</dt><dd>Stiker label dengan: nama produk, isi, berat, tanggal produksi, expiry, cara masak, info halal, BPOM, barcode</dd>
+    <dt>Shelf life:</dt><dd>90 hari pada -18°C</dd>
+  </dl>
+
+  <h3>C. Shipping Packaging (Cold Chain)</h3>
+  <table>
+    <tr><th>Komponen</th><th>Detail</th><th>Harga</th></tr>
+    <tr><td>Styrofoam cooler box</td><td>30x20x15cm, dinding 3cm</td><td>Rp 8.000 - 15.000</td></tr>
+    <tr><td>Gel ice pack (2x)</td><td>500g each, reusable</td><td>Rp 3.000 - 5.000 /pcs</td></tr>
+    <tr><td>Outer cardboard box</td><td>Corrugated, branded</td><td>Rp 3.000 - 5.000</td></tr>
+    <tr><td>Fragile sticker</td><td>"FROZEN FOOD - Simpan di Freezer"</td><td>Rp 200</td></tr>
+    <tr><td>Cooking instruction card</td><td>A6, cara kukus/goreng/microwave</td><td>Rp 300</td></tr>
+  </table>
+
+  <div class="box">
+    <strong>Tips Cold Chain:</strong>
+    <ul style="margin-top:10px;">
+      <li>Pack dimsum dalam keadaan beku keras (-18°C)</li>
+      <li>Letakkan gel ice di atas dan bawah produk</li>
+      <li>Gunakan lakban kuat untuk seal styrofoam</li>
+      <li>Kirim via same-day/next-day (JNE YES, SiCepat BEST, AnterAja)</li>
+      <li>Untuk luar kota: gunakan dry ice + double gel ice</li>
+    </ul>
+  </div>
+
+  <h3>D. Label Wajib (Regulasi BPOM)</h3>
+  <ul>
+    <li>Nama produk: "DY Dimsum - Hakau Premium Frozen (10pcs)"</li>
+    <li>Komposisi/ingrediens lengkap</li>
+    <li>Berat bersih</li>
+    <li>Tanggal produksi & kadaluarsa</li>
+    <li>Cara penyimpanan: "Simpan pada suhu -18°C"</li>
+    <li>Cara penyajian: "Kukus 10-12 menit / Microwave 3-4 menit"</li>
+    <li>Nomor PIRT / BPOM</li>
+    <li>Logo Halal MUI</li>
+    <li>Informasi alergen (udang, telur, gandum, dll)</li>
+    <li>Nama & alamat produsen</li>
+  </ul>
+</div>
+
+<!-- 4. HAMPERS PREMIUM -->
+<div class="page">
+  <h2 class="st">4. Hampers Premium & Seasonal</h2>
+  <p>Terinspirasi dari kesuksesan <strong>Kane Dimsum Bali</strong> dengan hampers Idul Fitri & Nyepi, DY Dimsum akan mengembangkan lini hampers premium untuk setiap momen spesial di Medan.</p>
+
+  <h3>A. Kalender Hampers</h3>
+  <table>
+    <tr><th>Periode</th><th>Event</th><th>Tema</th><th>Target Market</th></tr>
+    <tr><td>Jan-Feb</td><td><strong>Imlek (Chinese New Year)</strong></td><td>Red & gold, Chinese ornaments, angpao</td><td>Komunitas Tionghoa Medan</td></tr>
+    <tr><td>Mar-Apr</td><td><strong>Ramadan & Idul Fitri</strong></td><td>Green & gold, Islamic patterns, ketupat</td><td>Mayoritas Muslim Medan</td></tr>
+    <tr><td>Jun</td><td>Hari Raya Waisak</td><td>Minimalist, lotus, calm colors</td><td>Komunitas Buddha</td></tr>
+    <tr><td>Aug</td><td>HUT RI / 17 Agustus</td><td>Merah putih, nasional</td><td>Corporate & keluarga</td></tr>
+    <tr><td>Oct-Nov</td><td>Diwali / Deepavali</td><td>Colorful, festive</td><td>Komunitas Hindu/India Medan</td></tr>
+    <tr><td>Dec</td><td><strong>Natal & Tahun Baru</strong></td><td>Christmas red & green, snowflakes</td><td>Komunitas Kristen Medan</td></tr>
+    <tr><td>Anytime</td><td>Corporate Gifting</td><td>Elegant, professional</td><td>Perusahaan, kantor</td></tr>
+    <tr><td>Anytime</td><td>Birthday / Anniversary</td><td>Cute, personal</td><td>Individual</td></tr>
+  </table>
+
+  <div class="box">
+    <strong>Mengapa Medan Perfect untuk Multi-Holiday Hampers:</strong> Medan adalah kota multikultural dengan populasi besar Batak Kristen, Tionghoa, Muslim Melayu/Jawa, dan Hindu Tamil. Setiap komunitas merayakan hari besar yang berbeda = peluang hampers sepanjang tahun!
+  </div>
+
+  <h3>B. Hampers Tiers</h3>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-header red-bg">Hampers Classic<br><small>Rp 150.000</small></div>
+      <div class="card-body">
+        <ul style="font-size:0.85em;padding-left:18px;">
+          <li>8 pcs dimsum (2 varian)</li>
+          <li>1 saus special</li>
+          <li>Kraft box with ribbon</li>
+          <li>Greeting card</li>
+          <li>Tissue paper padding</li>
+        </ul>
+        <span class="tag tag-red">Personal Gift</span>
+      </div>
+    </div>
+    <div class="card" style="border:2px solid var(--gold);">
+      <div class="card-header gold-bg">Hampers Premium<br><small>Rp 288.000</small></div>
+      <div class="card-body">
+        <ul style="font-size:0.85em;padding-left:18px;">
+          <li>16 pcs dimsum (4 varian)</li>
+          <li>2 saus special</li>
+          <li>Premium rigid box</li>
+          <li>Satin ribbon</li>
+          <li>Greeting card custom</li>
+          <li>Dried flower decoration</li>
+          <li>Paper bag eksklusif</li>
+        </ul>
+        <span class="tag tag-gold">Best Seller</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header dark-bg">Hampers Sultan<br><small>Rp 488.000</small></div>
+      <div class="card-body">
+        <ul style="font-size:0.85em;padding-left:18px;">
+          <li>24 pcs dimsum (all varian)</li>
+          <li>3 saus + chili oil</li>
+          <li>Wooden/bamboo gift box</li>
+          <li>Gold foil ribbon</li>
+          <li>Custom name card</li>
+          <li>Premium chopsticks set</li>
+          <li>Tea sampler (3 jenis)</li>
+          <li>Tote bag branded</li>
+        </ul>
+        <span class="tag tag-blue">Corporate</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>C. Imlek Special (Chinese New Year)</h3>
+  <div class="mockup">
+    <h4>DY Dimsum - Imlek Hampers 2027</h4>
+    <pre style="text-align:left;font-size:0.8em;background:#fff0f0;padding:20px;border-radius:10px;display:inline-block;">
++--------------------------------------------------+
+| [RED RIGID BOX with GOLD Chinese Pattern]        |
+| Embossed "DY DIMSUM" logo + "Gong Xi Fa Cai"    |
+|                                                  |
+|  +--------------------------------------------+ |
+|  | Layer 1 (top):                              | |
+|  | [Angpao envelope x2] [Greeting card]        | |
+|  | [Red ribbon + gold tassel]                  | |
+|  +--------------------------------------------+ |
+|  | Layer 2 (dimsum):                           | |
+|  | [Hakau x4] [Siomay x4] [Lumpia x4]         | |
+|  | [Andaliman x4] [Saus x2] [Chili oil x1]    | |
+|  | (in gold foil cups / mini bamboo tray)      | |
+|  +--------------------------------------------+ |
+|  | Layer 3 (extras):                           | |
+|  | [Chinese tea bags x3] [Fortune cookies x2]  | |
+|  | [Bamboo chopsticks set]                     | |
+|  +--------------------------------------------+ |
+|                                                  |
+| [Gold satin ribbon + DY Dimsum seal sticker]     |
+| [Red paper bag with gold cord handle]            |
++--------------------------------------------------+
+    </pre>
+  </div>
+
+  <h3>D. Lebaran/Idul Fitri Special</h3>
+  <div class="mockup">
+    <h4>DY Dimsum - Hampers Lebaran 2027</h4>
+    <pre style="text-align:left;font-size:0.8em;background:#f0f5f0;padding:20px;border-radius:10px;display:inline-block;">
++--------------------------------------------------+
+| [SAGE GREEN BOX with GOLD Islamic Geometric]     |
+| "DY DIMSUM" logo + "Eid Mubarak"                |
+|                                                  |
+|  +--------------------------------------------+ |
+|  | [16 pcs dimsum in elegant tray]             | |
+|  | [All halal, displayed in gold cups]         | |
+|  |                                             | |
+|  | [Saus x2] [Sambal Medan x1]                | |
+|  | [Nastar cookies mini x4]                    | |
+|  | [Kurma dates box x1]                        | |
+|  | [Greeting card "Selamat Hari Raya"]         | |
+|  +--------------------------------------------+ |
+|                                                  |
+| [Green ribbon + gold crescent moon charm]        |
+| [Paper bag with ketupat pattern]                 |
++--------------------------------------------------+
+    </pre>
+  </div>
+</div>
+
+<!-- 5. CATERING BOX -->
+<div class="page">
+  <h2 class="st">5. Catering & Bulk Packaging</h2>
+
+  <h3>A. Nampan Dimsum (Party Tray)</h3>
+  <table>
+    <tr><th>Ukuran</th><th>Isi</th><th>Kemasan</th><th>Harga Kemasan</th></tr>
+    <tr><td>Small (3-5 org)</td><td>15 pcs, 3 varian</td><td>Aluminium foil tray + clear lid</td><td>Rp 5.000</td></tr>
+    <tr><td>Medium (5-8 org)</td><td>25 pcs, 5 varian</td><td>Aluminium foil tray + clear lid</td><td>Rp 7.000</td></tr>
+    <tr><td>Large (10-15 org)</td><td>40 pcs, 8 varian</td><td>Large tray + compartment dividers</td><td>Rp 10.000</td></tr>
+    <tr><td>Corporate Box</td><td>50 pcs, all varian</td><td>Premium catering box, branded</td><td>Rp 15.000</td></tr>
+  </table>
+
+  <h3>B. Individual Portion (Arisan/Meeting)</h3>
+  <table>
+    <tr><th>Paket</th><th>Isi per box</th><th>Min. Order</th><th>Kemasan</th></tr>
+    <tr><td>Snack Box DY</td><td>4 pcs dimsum + saus + tissue</td><td>20 box</td><td>Branded box + stiker</td></tr>
+    <tr><td>Lunch Box DY</td><td>6 pcs dimsum + nasi + saus</td><td>15 box</td><td>2-compartment box</td></tr>
+  </table>
+
+  <h3>C. Bamboo Steamer Rental</h3>
+  <div class="box">
+    <strong>Premium Experience:</strong> Untuk acara spesial, tawarkan sewa bamboo steamer asli yang berisi dimsum siap kukus. Pelanggan mendapat pengalaman dimsum restoran di rumah.
+    <ul style="margin-top:10px;">
+      <li>Bamboo steamer 3-tier + 24 pcs dimsum: Rp 250.000 (deposit steamer Rp 50.000, dikembalikan)</li>
+      <li>Include: petunjuk cara kukus, saus komplit, sumpit</li>
+      <li>Perfect untuk: ulang tahun, gathering, date night</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 6. ECO PACKAGING -->
+<div class="page">
+  <h2 class="st">6. Eco-Friendly Packaging</h2>
+  <p>Diferensiasi brand melalui komitmen lingkungan. Generasi muda Medan semakin peduli sustainability.</p>
+
+  <table>
+    <tr><th>Komponen</th><th>Material Konvensional</th><th>Alternatif Eco</th><th>Selisih Harga</th></tr>
+    <tr><td>Food box</td><td>Styrofoam / plastic</td><td>Kraft paper + soy ink print</td><td>+Rp 500/pcs</td></tr>
+    <tr><td>Sauce cup</td><td>PP plastic</td><td>Bagasse (ampas tebu) cup</td><td>+Rp 300/pcs</td></tr>
+    <tr><td>Bag</td><td>Plastic bag</td><td>Kraft paper bag / cotton tote</td><td>+Rp 1.000/pcs</td></tr>
+    <tr><td>Sticker</td><td>Vinyl sticker</td><td>Uncoated paper sticker</td><td>Sama</td></tr>
+    <tr><td>Utensils</td><td>Plastic chopsticks</td><td>Bamboo chopsticks / none</td><td>+Rp 200/pcs</td></tr>
+  </table>
+
+  <div class="box">
+    <strong>Eco Strategy:</strong> Mulai dengan opsi "eco-packaging" sebagai add-on (+Rp 2.000 per order). Jika demand tinggi, jadikan standar di fase kedua. Komunikasikan komitmen lingkungan di sosmed untuk brand value.
+  </div>
+</div>
+
+<!-- 7. DESIGN GUIDELINES -->
+<div class="page">
+  <h2 class="st">7. Design Guidelines untuk Semua Packaging</h2>
+
+  <h3>A. Brand Elements Wajib</h3>
+  <table>
+    <tr><th>Element</th><th>Placement</th><th>Specs</th></tr>
+    <tr><td>Logo DY Dimsum</td><td>Tutup box, paper bag, stiker</td><td>Min. 3cm diameter, always on red or dark background</td></tr>
+    <tr><td>"Handmade Premium"</td><td>Di bawah logo</td><td>Playfair Display font, gold color</td></tr>
+    <tr><td>Color palette</td><td>Seluruh kemasan</td><td>Red #C41E3A, Gold #D4A017, Dark #1A1A2E, Cream #FFF8F0</td></tr>
+    <tr><td>Pattern</td><td>Background subtle</td><td>Chinese geometric / cloud pattern, opacity 10-15%</td></tr>
+    <tr><td>QR Code</td><td>Thank you card / box</td><td>Link ke Instagram @dydimsum.medan</td></tr>
+    <tr><td>Halal logo</td><td>Setiap kemasan makanan</td><td>Min. 1cm, official MUI halal logo</td></tr>
+    <tr><td>WhatsApp CTA</td><td>Menu flyer / thank you card</td><td>"Order langsung via WA: 0812-xxxx-xxxx"</td></tr>
+  </table>
+
+  <h3>B. Typography</h3>
+  <table>
+    <tr><th>Usage</th><th>Font</th><th>Weight</th></tr>
+    <tr><td>Brand name / titles</td><td>Playfair Display</td><td>Bold / Black (700-900)</td></tr>
+    <tr><td>Body text / descriptions</td><td>Inter</td><td>Regular / Medium (400-500)</td></tr>
+    <tr><td>Price tags</td><td>Inter</td><td>Bold (700)</td></tr>
+    <tr><td>Taglines / accents</td><td>Dancing Script</td><td>Bold (700)</td></tr>
+  </table>
+
+  <h3>C. Print Specs</h3>
+  <dl class="specs">
+    <dt>Box printing:</dt><dd>Offset printing, CMYK, 300gsm artcard + laminated</dd>
+    <dt>Sticker printing:</dt><dd>Digital print, glossy/matte vinyl or paper, die-cut circle/rectangle</dd>
+    <dt>Paper bag:</dt><dd>120gsm kraft paper, 1-2 color screen print or full color offset</dd>
+    <dt>Thank you card:</dt><dd>260gsm artcard, double-sided full color, rounded corners</dd>
+    <dt>Label frozen:</dt><dd>Waterproof synthetic sticker (PP white), thermal/inkjet compatible</dd>
+  </dl>
+</div>
+
+<!-- 8. SUPPLIER & BUDGET -->
+<div class="page">
+  <h2 class="st">8. Supplier & Budget Packaging</h2>
+
+  <h3>A. Supplier Rekomendasi</h3>
+  <table>
+    <tr><th>Item</th><th>Supplier</th><th>Platform</th></tr>
+    <tr><td>Kraft food box</td><td>Supplier Medan / Tokopedia</td><td>Tokopedia, Shopee</td></tr>
+    <tr><td>Vacuum bags</td><td>Alibaba / distributor lokal</td><td>Alibaba, Tokopedia</td></tr>
+    <tr><td>Stiker & label</td><td>Percetakan Medan / Stickermu</td><td>Lokal / Online</td></tr>
+    <tr><td>Paper bag</td><td>Percetakan offset Medan</td><td>Lokal</td></tr>
+    <tr><td>Styrofoam box</td><td>Supplier kemasan Medan</td><td>Tokopedia</td></tr>
+    <tr><td>Gel ice pack</td><td>Ice pack Indonesia</td><td>Shopee, Tokopedia</td></tr>
+    <tr><td>Rigid gift box</td><td>Custom box maker</td><td>Alibaba / lokal</td></tr>
+    <tr><td>Ribbon & accessories</td><td>Toko perlengkapan gift Medan</td><td>Pasar / online</td></tr>
+  </table>
+
+  <h3>B. Budget Packaging Bulanan</h3>
+  <table>
+    <tr><th>Kategori</th><th>Volume/Bulan</th><th>Biaya/Bulan</th></tr>
+    <tr><td>Daily delivery packaging</td><td>~1.200 orders</td><td>Rp 4.800.000</td></tr>
+    <tr><td>Frozen packaging</td><td>~200 packs</td><td>Rp 800.000</td></tr>
+    <tr><td>Branding materials (stiker, card, flyer)</td><td>~1.500 sets</td><td>Rp 900.000</td></tr>
+    <tr><td>Hampers (seasonal, avg/month)</td><td>~30 hampers</td><td>Rp 600.000</td></tr>
+    <tr><td>Catering packaging</td><td>~10 events</td><td>Rp 300.000</td></tr>
+    <tr><td><strong>TOTAL</strong></td><td></td><td><strong>Rp 7.400.000</strong></td></tr>
+  </table>
+
+  <div class="cost-total">
+    <p>Total Packaging Budget (Bulan ke-6, 40 orders/hari)</p>
+    <div class="amount">~Rp 7.4 Juta / Bulan</div>
+    <p style="opacity:0.7;font-size:0.85em;margin-top:5px;">~12% dari projected revenue | Target: turun ke 8-10% dengan volume discount</p>
+  </div>
+
+  <h3>C. Packaging Timeline</h3>
+  <div class="timeline">
+    <div class="timeline-item"><strong>Bulan 0 (Pre-Launch)</strong><p>Desain semua artwork packaging. Order batch pertama: 500 box + 1000 stiker + 500 paper bag + 500 thank you card.</p></div>
+    <div class="timeline-item"><strong>Bulan 1-2 (Launch)</strong><p>Gunakan packaging daily delivery standar. Test response pelanggan. Collect feedback tentang packaging.</p></div>
+    <div class="timeline-item"><strong>Bulan 3 (Frozen Launch)</strong><p>Mulai frozen packaging. Order vacuum bags, stiker label waterproof, styrofoam box.</p></div>
+    <div class="timeline-item"><strong>Bulan 4-5 (Seasonal Prep)</strong><p>Desain hampers untuk hari besar berikutnya (Imlek / Lebaran / Natal). Pre-order rigid box & accessories.</p></div>
+    <div class="timeline-item"><strong>Bulan 6+ (Optimize)</strong><p>Negosiasi volume discount. Evaluate eco-packaging adoption. Tambah lini catering packaging.</p></div>
+  </div>
+</div>
+
+<!-- 9. UNBOXING EXPERIENCE -->
+<div class="page">
+  <h2 class="st">9. Unboxing Experience Strategy</h2>
+  <p>Di era sosial media, <strong>unboxing moment = free marketing</strong>. Setiap kemasan harus mendorong pelanggan untuk foto dan share.</p>
+
+  <h3>Instagram-Worthy Checklist</h3>
+  <table>
+    <tr><th>Element</th><th>Purpose</th><th>Implementation</th></tr>
+    <tr><td>Branded seal sticker</td><td>First impression saat buka bag</td><td>Circle gold sticker "DY" pada fold box</td></tr>
+    <tr><td>Color-coordinated</td><td>Aesthetic consistency</td><td>Red box + gold ribbon + white tissue paper</td></tr>
+    <tr><td>Surprise element</td><td>Delight factor</td><td>Random free sample item / bonus saus / mini dessert</td></tr>
+    <tr><td>Thank you card</td><td>Personal touch</td><td>"Terima kasih [nama], dimsum ini dibuat special untuk kamu!"</td></tr>
+    <tr><td>Photo spot hint</td><td>Encourage sharing</td><td>Card: "Share momen kamu! Tag @dydimsum.medan, dapat voucher!"</td></tr>
+    <tr><td>Reorder incentive</td><td>Repeat purchase</td><td>Promo code on card: "DYCOME10" = diskon 10% next order via WA</td></tr>
+  </table>
+
+  <div class="box">
+    <strong>Pro Tip dari Kane Dimsum:</strong> Hampers yang cantik = pelanggan foto sebelum buka = free Instagram exposure. Investasi Rp 10.000 extra di packaging hampers bisa menghasilkan reach organik setara iklan Rp 100.000+.
+  </div>
+</div>
+
+<footer style="text-align:center;padding:40px;background:var(--dark);color:white;font-size:0.9em;">
+  <p><strong>DY Dimsum - Dimsum Yanti Lubis</strong></p>
+  <p>Rencana Packaging 2026 | Medan, Sumatera Utara</p>
+</footer>
+
+</body>
+</html>
